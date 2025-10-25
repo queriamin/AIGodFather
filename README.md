@@ -11,8 +11,8 @@ Code Study with SW, MK, and HS
 - 가능하면 주석을 충분히 달아서 설명할 때 다른 사람들이 이해하기 쉽게 해줄 것
 
 ### Chapters
-1. 200 자료구조 https://www.acmicpc.net/workbook/view/3953
-2. 300 수학 https://www.acmicpc.net/workbook/view/3956
+1. [251031] 200 자료구조 https://www.acmicpc.net/workbook/view/3953
+2. [251107] 300 수학 https://www.acmicpc.net/workbook/view/3956
 
 ## Schedule
 - 매주 금요일 17시, 64동 302호
