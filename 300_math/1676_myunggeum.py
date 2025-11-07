@@ -1,7 +1,7 @@
 """
 * Problem   : 10872
 * Title     : 팩토리얼
-* Link      : https://www.acmicpc.net/problem/10872
+* Link      : https://www.acmicpc.net/problem/1676
 * Category  : Math > Factorial
 """
 MAX_NUM = 500
