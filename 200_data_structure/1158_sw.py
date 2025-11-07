@@ -15,7 +15,7 @@ def josephus(len_lst, k):
     while roster:
         gun += k 
         gun = gun % len(roster)
-        killed.append(roster.pop(gun % len(roster)))
+        killed.append(roster.pop(gun))
         gun -= 1
     print("<" + ", ".join([str(x) for x in killed])+ ">")
 
