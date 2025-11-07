@@ -1,6 +1,5 @@
 # AIGodFather
-Code Study with SW, MK, and HS
-
+Code Study with SW, MJ, MK, and HS
 
 
 ## Baekjoon Code
