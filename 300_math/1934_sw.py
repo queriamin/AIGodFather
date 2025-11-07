@@ -8,7 +8,6 @@
 from sys import stdin
 
 def gcm(a:int, b:int):
-    
     mod = max(a,b) % min(a,b)
     if(mod == 0):
         return min(a,b)

@@ -8,44 +8,42 @@ from sys import stdin
 
 primes = set()
 
-def is_prime_number(n):
-    end = int(n**(1/2))
-    for i in range(2, end+1):
-        if n % i == 0:
-            return False
+def prime_numbers(n):
+    prime_numbers = list(range(1,n+1))
+    prime_numbers[0] = 0
     
-    return True
-
-def check_goldbach(target_nums):    
-    # primes = []
-    # primes_set = set()
-
-    for t in target_nums:
-        for i, n in enumerate(range(3, t+1)):
-            is_n_p = is_prime_number(n)
-            is_t_m_n_p = is_prime_number(t-n)
-
-            if(is_n_p):
-                primes.add(n)
-
-            if(is_t_m_n_p):
-                primes.add(t-n)
-
-            if(is_prime_number(n) and is_prime_number(t-n)):
-                print(f"{t} = {n} + {t-n}")
-                break
+    pointer = 0
+    while pointer < n:
+        if(prime_numbers[pointer] == 0):
+            pointer += 1
+            continue
+        else:
+            p_n = prime_numbers[pointer]
+            tmp_pointer = p_n + pointer
+            while(tmp_pointer < n):
+                prime_numbers[tmp_pointer] = 0
+                tmp_pointer += p_n
             
-            if(i == t-3+1):
-                print("Goldbach's conjecture is wrong.")
-        
-        # for i, p in enumerate(primes[1:]):
-        #     if(t-p in primes_set):
-        #         print(f"{t} = {p} + {t-p}")
-        #         break
+            pointer += 1
+            
+    
+    prime_numbers = [p for p in prime_numbers if p != 0]
 
-        #     if(i == len(primes)-1):
-        #         print("Goldbach's conjecture is wrong.")
-        
+    return prime_numbers
+
+
+def check_goldbach(nums):
+    for n in nums:
+        for i in range(1, n+1):
+            if(i in primes and (n-i) in primes):
+                print(f"{n} = {i} + {n-i}")
+                break
+            if(i == n):
+                print("fuck")
+
+
+
+
 nums = []
 
 while True:
@@ -54,6 +52,8 @@ while True:
         nums.append(input_value)
     else:
         break
+
+primes = set(prime_numbers(max(nums)))
 
 check_goldbach(nums)
     
