@@ -12,6 +12,7 @@ Code Study with SW, MJ, MK, and HS
 ### Chapters
 1. [251031] 200 자료구조 https://www.acmicpc.net/workbook/view/3953
 2. [251107] 300 수학 https://www.acmicpc.net/workbook/view/3956
+3. [251114] 400 다이나믹 프로그래밍 1 https://www.acmicpc.net/workbook/view/3959
 
 ## Schedule
 - 매주 금요일 17시, 64동 302호
