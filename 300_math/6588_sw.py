@@ -41,9 +41,6 @@ def check_goldbach(nums):
             if(i == n):
                 print("fuck")
 
-
-
-
 nums = []
 
 while True:
