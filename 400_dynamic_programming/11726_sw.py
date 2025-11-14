@@ -24,25 +24,23 @@
 class twoNTiling:
     def __init__(self) -> None:
         self.plan_count = 0
+        self.tiling_memo = [1,2]
+        self.MOD = 10_007
         return
-
-    def tiling_plan(self, target_n):
-        self.tiling_plan_helper(1, target_n)
-        self.tiling_plan_helper(2, target_n)
-        return self.plan_count
     
-    def tiling_plan_helper(self, column_count, target_n):
-        if(column_count == target_n):
-            self.plan_count += 1 
-        elif(column_count < target_n):
-            self.tiling_plan_helper(column_count+1, target_n)
-            self.tiling_plan_helper(column_count+2, target_n)
-        else:
-            return
+    def tiling(self,n):    
+        if n <= len(self.tiling_memo):
+            return self.tiling_memo[n-1]
+
+        for i in range(len(self.tiling_memo), n):
+            self.tiling_memo.append((self.tiling_memo[i-1] + self.tiling_memo[i-2]) % self.MOD)
+            
+        return self.tiling_memo[n-1]
+    
 
     
 tiler = twoNTiling()
 
 N = int(input())
 
-print(tiler.tiling_plan(N))
+print(tiler.tiling(N))
