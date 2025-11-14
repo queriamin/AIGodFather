@@ -29,10 +29,7 @@ class Adder:
             self.num_maker_helper(target, wip+1)
             self.num_maker_helper(target, wip+2)
             self.num_maker_helper(target, wip+3)
-
         return
-    
-
 
 N = int(input())
 adder = Adder()

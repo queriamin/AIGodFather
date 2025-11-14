@@ -7,34 +7,6 @@
 
 from sys import stdin
 
-# class CardBuyer:
-#     def __init__(self) -> None:
-#         self.cards = []
-#         self.max_price = 0
-#         return
-
-#     def flex(self, target):
-#         for n, p in self.cards:
-#             self.flex_helper(target, n, p, n)
-#         return self.max_price
-
-#     def flex_helper(self, target, card_num, price, last_pack_size):
-#         if(card_num == target and price > self.max_price):
-#             self.max_price = price
-#             return
-
-#         for i in range(last_pack_size-1, len(self.cards)+1):
-#             n = self.cards[i][0]
-#             p = self.cards[i][1]
-#             if(card_num + n > target):
-#                 break
-#             self.flex_helper(target, card_num+n, price+p, n)
-#         return
-    
-#     def set_cards(self, cards_list):
-#         self.cards = cards_list
-
-
 class CardBuyer:
     def __init__(self) -> None:
         self.cards = []
@@ -61,7 +33,7 @@ class CardBuyer:
             self.max_price_dict[N] = max_price
     
     def set_cards(self, cards_list):
-        self.cards = cards_list
+        self.cards = cards_list[:]
 
 
 N = int(stdin.readline().rstrip())

@@ -38,7 +38,7 @@ class twoNTiling:
         return self.tiling_memo[n-1]
     
 
-    
+
 tiler = twoNTiling()
 
 N = int(input())

@@ -7,7 +7,6 @@
 
 class twoNTiling:
     def __init__(self) -> None:
-        self.plan_count = 0
         self.tiling_memo = [1,3]
         self.MOD = 10_007
         return
